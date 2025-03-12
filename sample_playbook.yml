@@ -1,3 +1,11 @@
-- name: Run AOS-CX command
-  arubanetworks.aoscx.aoscx_command:
-    commands: "show version"
+- hosts: all
+  collections:
+    - arubanetworks.aoscx
+  gather_facts: False
+  vars:
+    ansible_connection: network_cli
+  tasks:
+    - name: Execute show run on the switch
+      aoscx_command:
+        commands:
+          - show run
