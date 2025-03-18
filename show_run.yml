@@ -9,6 +9,6 @@
         - show run
       register: run_output
 
-    - name: Display version output
+  - name: Display version output
       debug:
         var: run_output
