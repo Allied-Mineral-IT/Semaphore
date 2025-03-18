@@ -1,9 +1,11 @@
 - hosts: all
+  collections:
+    - arubanetworks.aoscx
   gather_facts: False
   tasks:
-  - name: Configure Interface 1/1/3
-    aoscx_l2_interface:
-      interface: 1/1/3
-      vlan_mode: access
-      vlan_access: '1000'
-      description: 'NOT_ASSIGNED'
+    - name: Configure Interface 1/1/3
+      aoscx_l2_interface:
+        interface: 1/1/3
+        vlan_mode: access
+        vlan_access: '1000'
+        description: 'NOT_ASSIGNED'
