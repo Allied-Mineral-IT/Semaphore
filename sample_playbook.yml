@@ -1,6 +1,0 @@
-- hosts: all
-  tasks:
-    - name: Execute show run on the switch
-      aoscx_command:
-        commands:
-          - show run

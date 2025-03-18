@@ -1,0 +1,11 @@
+- hosts: all
+  tasks:
+    - name: Execute show run on the switch
+      aoscx_command:
+        commands:
+          - show run
+        register: running_config_output
+
+      - name: Display version output
+        debug:
+          var: running_config_output
