@@ -3,12 +3,12 @@
     - arubanetworks.aoscx
   gather_facts: False
   tasks:
-    - name: Execute show run on the switch
-      aoscx_command:
-        commands:
-          - show run
-        register: run_output
+  - name: Execute show run on the switch
+    aoscx_command:
+      commands:
+        - show run
+      register: run_output
 
-      - name: Display version output
-        debug:
-          var: run_output
+    - name: Display version output
+      debug:
+        var: run_output
