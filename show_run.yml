@@ -7,8 +7,4 @@
     aoscx_command:
       commands:
         - show run
-      register: running_output
-      
-  - name: Display running output
-    debug:
-      var: running_output
+      output_file:
