@@ -10,5 +10,5 @@
       register: run_output
 
   - name: Display version output
-      debug:
-        var: run_output
+    debug:
+      var: run_output
