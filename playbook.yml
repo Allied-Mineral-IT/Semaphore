@@ -7,3 +7,8 @@
       aoscx_command:
         commands:
           - show version
+      register: version_output
+
+    - name: Display version output
+      debug:
+        var: version_output
