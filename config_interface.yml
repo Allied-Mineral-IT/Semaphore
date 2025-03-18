@@ -1,0 +1,8 @@
+- hosts: all
+  tasks:
+    - name: Config interface 1/1/3
+      aoscx_command:
+        commands:
+          - config
+          - interface 1/1/3
+          - description NOT_ASSIGNED
