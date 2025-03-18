@@ -2,8 +2,6 @@
   collections:
     - arubanetworks.aoscx
   gather_facts: False
-  vars:
-    ansible_python_interpreter: /usr/bin/python3
   tasks:
     - name: Execute show run on the switch
       aoscx_command:
