@@ -2,14 +2,9 @@
   collections:
     - arubanetworks.aoscx
   gather_facts: yes
-    - hostname
   vars:
     ansible_connection: network_cli
   tasks:
-    - name: Execute show run on the switch
-      aoscx_command:
-        commands: ['show run']
-      register: running_config
-
-    - name: Print the running configuration line by line
-      loop: "{{ running_config.stdout }}"
+    - name: Print all available facts
+      ansible.builtin.debug:
+        var: ansible_facts
