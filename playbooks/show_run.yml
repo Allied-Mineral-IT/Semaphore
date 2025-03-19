@@ -8,6 +8,3 @@
     - name: Execute show run on the switch
       aoscx_command:
         commands: ['show run']
-    - name: Display hostname
-      debug:
-        msg: "The hostname of this system is {{ ansible_facts['hostname'] }}"
