@@ -10,5 +10,5 @@
       register: running_config
 
     - name: Print the running configuration line by line
-      debug:
       loop: "{{ running_config.stdout }}"
+      debug:
