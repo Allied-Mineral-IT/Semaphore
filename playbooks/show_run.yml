@@ -12,4 +12,4 @@
       register: running_config
 
     - name: Print the running configuration line by line
-      loop: "{{ running_config.stdout }}
+      loop: "{{ running_config.stdout }}"
