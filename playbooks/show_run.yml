@@ -11,4 +11,4 @@
 
     - name: Print the running configuration line by line
       debug:
-        var: running_config
+      loop: "{{ running_config.stdout }}"
