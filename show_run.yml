@@ -7,4 +7,3 @@
     aoscx_command:
       commands:
         - show run
-      Output_file: 
