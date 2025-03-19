@@ -9,6 +9,10 @@
           - show run
       register: running_config
 
-    - name: Print the running configuration
+    - name: Process the running configuration
+      set_fact:
+        processed_config: "{{ running_config.stdout | replace('\"', '') | replace(',', '') }}"
+
+    - name: Print the processed running configuration
       debug:
-        var: running_config.stdout_lines
+        msg: "{{ processed_config }}"
