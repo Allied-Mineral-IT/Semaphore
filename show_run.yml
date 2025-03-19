@@ -11,7 +11,7 @@
 
     - name: Process the running configuration
       set_fact:
-        processed_config: "{{ running_config.stdout | replace('\"', '') | replace(',', '') }}"
+        processed_config: "{{ running_config.stdout_lines | replace('\"', '') | replace(',', '') }}"
 
     - name: Print the processed running configuration
       debug:
