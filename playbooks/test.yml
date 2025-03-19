@@ -1,1 +1,5 @@
-
+- name: Test pyaoscx module
+  hosts: localhost
+  tasks:
+    - name: Check pyaoscx module
+      command: python3 -c "import pyaoscx"
