@@ -2,4 +2,4 @@
   hosts: localhost
   tasks:
     - name: Check pyaoscx module
-      command: python3 -c "import pyaoscx"
+      command: /tmp/semaphore_venv/bin/python -c "import pyaoscx"
