@@ -12,6 +12,4 @@
     - name: Print the running configuration line by line
       debug:
         msg: "{{ item }}"
-      loop: "{{ running_config.stdout.split('\n') }}"
-      loop_control:
-        label: "{{ item }}"
+      loop: "{{ running_config.stdout }}"
