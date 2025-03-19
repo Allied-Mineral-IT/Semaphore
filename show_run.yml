@@ -7,5 +7,3 @@
     aoscx_command:
       commands:
         - show run
-      output_file_format: plain-text
-      stdout_lines:
