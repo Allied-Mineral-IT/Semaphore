@@ -9,10 +9,9 @@
           - show run
       register: running_config
 
-    - name: Process the running configuration
-      set_fact:
-        processed_config: "{{ running_config.stdout_lines | replace('\"', '') | replace(',', '') }}"
-
-    - name: Print the processed running configuration
+    - name: Print the running configuration line by line
       debug:
-        msg: "{{ processed_config }}"
+        msg: "{{ item }}"
+      loop: "{{ running_config.stdout.split('\n') }}"
+      loop_control:
+        label: "{{ item }}"
