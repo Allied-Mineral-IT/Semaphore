@@ -1,7 +1,7 @@
 - hosts: all
   collections:
     - arubanetworks.aoscx
-  gather_facts: False
+  gather_facts: True
   tasks:
     - name: Configure Interface 1/1/5
       aoscx_l2_interface:
