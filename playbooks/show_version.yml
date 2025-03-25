@@ -2,7 +2,7 @@
   collections:
     - arubanetworks.aoscx
   gather_facts: True
-   vars:
+  vars:
     ansible_connection: network_cli
   tasks:
     - name: Execute show run on the switch
