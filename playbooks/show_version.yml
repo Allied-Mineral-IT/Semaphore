@@ -1,6 +1,7 @@
 - hosts: all
   collections:
     - arubanetworks.aoscx
+  gather_facts: True
    vars:
     ansible_connection: network_cli
   tasks:
